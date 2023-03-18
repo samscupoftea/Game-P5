@@ -17,7 +17,7 @@
     background-color: black;
     position: relative;
     left: 400px;
-    animation: block is infinite;
+    animation: block is infinite linear;
 
 }
 
