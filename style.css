@@ -26,9 +26,3 @@
     100%{left:-50px}
 }
 
-#character{
-    width: 20px;
-    height: 50px;
-    background-color: orangered;
-    position: relative;
-}
