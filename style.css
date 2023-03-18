@@ -2,3 +2,17 @@
     padding: 0;
     margin: 0;
 }
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid blue;
+
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: orangered;
+    position: relative;
+}
