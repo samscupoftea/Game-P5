@@ -8,6 +8,7 @@
     height: 500px;
     border: 1px solid rgb(0, 0, 0);
     margin: auto;
+    overflow: hidden;
 
 }
 
@@ -17,7 +18,7 @@
     background-color: black;
     position: relative;
     left: 400px;
-    animation: block is infinite linear;
+    animation: block 2s infinite linear;
 
 }
 
@@ -26,3 +27,12 @@
     100%{left:-50px}
 }
 
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
