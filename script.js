@@ -26,8 +26,15 @@ function jump(){
     let jumpInterval = setInterval(function(){
         let characterTop = 
         parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        if((characterTop>6)&&(counter<15)){
+        character.style.top = (characterTop+3) +"px"; 
+        }  
         if(jumping==0){
-        character.style.top = (characterTop+3) +"px";    
+            clearInterval(jumpInterval);
+            jumping=0;
+            jumpCount=0;
+
+        }
         jumpCount++;
     },10);
 
