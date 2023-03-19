@@ -11,8 +11,7 @@ hole.addEventListener('animationiteration' , () => {
 //ADD FUNCTION SIMILAR TO GRAVITY WHEREBY THE CHARACTER CONSTANTLY FALLS TO THE BOTTOM. 
 //1st SET INTERVAL FUNCTION THAT RUNS EVERY TEN MILLESECONDS SECONDS. 
 setInterval(function(){
-    let characterTop = 
-    parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     if(jumping==0){
     character.style.top = (characterTop+3) +"px";
     }
@@ -22,11 +21,10 @@ setInterval(function(){
 
 function jump(){
     jumping = 1;
-    letJumpCount =0;
+    letJumpCount = 0;
     let jumpInterval = setInterval(function(){
-        let characterTop = 
-        parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-        if((characterTop>6)&&(counter<15)){
+        let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        if((characterTop>6)&&(jumpCount<15)){
         character.style.top = (characterTop-5) +"px"; 
         }  
         if(jumpCount>20){
