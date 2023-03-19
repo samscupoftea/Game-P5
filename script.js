@@ -14,4 +14,10 @@ setInterval(function(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     character.style.top = (characterTop+3) +"px";
 },10);
+//NOW TO CREATE JUMPING FUNCTION
+//FIRST CREATE JUMP FUNCTION 
 
+function jump(){
+    jumping = 1;
+
+}
