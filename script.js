@@ -24,8 +24,11 @@ function jump(){
     jumping = 1;
     letJumpCount =0;
     let jumpInterval = setInterval(function(){
+        let characterTop = 
+        parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        if(jumping==0){
+        character.style.top = (characterTop+3) +"px";    
         jumpCount++;
-
     },10);
 
 }
