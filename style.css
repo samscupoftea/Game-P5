@@ -9,7 +9,7 @@
     border: 1px solid rgb(0, 0, 0);
     margin: auto;
     overflow: hidden;
-    background-image: url(./Images/cloud\ city.jpg);
+    background-image: url(./Images/milky-way-2695569_960_720.jpg);
    
    
     
@@ -22,7 +22,7 @@
     height: 500px;
     background-color: black;
     background-image: url(./Images/laser-beams-horizontal-light-rays-glowing-streaks-light-background_209910-565.jpg);
-    background-position: center;
+    background-position: top;
     position: relative;
     left: 400px;
     animation: block 2s infinite linear;
@@ -43,6 +43,7 @@
     top: -500px;
     animation: block 2s infinite linear;
     background-position: center;
+    background-image: url(./Images/milky-way-2695569_960_720.jpg);
 }
 
 #character{
