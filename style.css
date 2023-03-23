@@ -45,10 +45,10 @@
 #character{
     width: 22px;
     height: 18px;
-    background-color: green;
+    
     position: absolute;
     top: 100px;
     border-radius: 50%;
-    background-image: url;
+    background-image:url(./Images/xwing\ .jpeg);
     
 }
