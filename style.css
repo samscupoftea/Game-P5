@@ -9,6 +9,7 @@
     border: 1px solid rgb(0, 0, 0);
     margin: auto;
     overflow: hidden;
+    background-image: url(./Images/cloud\ city.jpg);
    
    
     
@@ -48,5 +49,6 @@
     position: absolute;
     top: 100px;
     border-radius: 50%;
+    background-image: url;
     
 }
