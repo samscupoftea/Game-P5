@@ -82,7 +82,7 @@ function jump() {
     }, 10);
 }
 
-
+// Below is template script to a possible game structure. But it's not the way i want the gam eot operate. I am going to build it from the ground up taking instruction from the game tutorials I have followed. 
 
 // <script>
 //     // Game variables
