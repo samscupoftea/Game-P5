@@ -84,109 +84,109 @@ function jump() {
 
 
 
-<script>
-    // Game variables
-    let attacker;
-    let defender;
-    let round = 1;
-    let attackerScore = 0;
-    let defenderScore = 0;
-    let currentPlayer = "Attacker";
+// <script>
+//     // Game variables
+//     let attacker;
+//     let defender;
+//     let round = 1;
+//     let attackerScore = 0;
+//     let defenderScore = 0;
+//     let currentPlayer = "Attacker";
 
-    // Game elements
-    const roleElement = document.getElementById('role');
-    const startButton = document.getElementById('startBtn');
-    const messageElement = document.getElementById('message');
-    const directionsElement = document.getElementById('directions');
-    const directionButtons = document.getElementsByClassName('directionBtn');
+//     // Game elements
+//     const roleElement = document.getElementById('role');
+//     const startButton = document.getElementById('startBtn');
+//     const messageElement = document.getElementById('message');
+//     const directionsElement = document.getElementById('directions');
+//     const directionButtons = document.getElementsByClassName('directionBtn');
 
-    // Display the Attacker and Defender roles
-    const displayRoles = () => {
-        roleElement.textContent = `Round ${round}: Attacker (${attacker}) vs Defender (${defender})`;
-    };
+//     // Display the Attacker and Defender roles
+//     const displayRoles = () => {
+//         roleElement.textContent = `Round ${round}: Attacker (${attacker}) vs Defender (${defender})`;
+//     };
 
-    // Event handler for direction selection
-    const directionClickHandler = (event) => {
-      const direction = event.target.textContent;
-    const currentPlayerDirection = direction;
+//     // Event handler for direction selection
+//     const directionClickHandler = (event) => {
+//       const direction = event.target.textContent;
+//     const currentPlayerDirection = direction;
 
-    if (currentPlayer === "Attacker") {
-        // Attacker's turn
-        attacker = currentPlayerDirection;
-    directionsElement.textContent = `Defender, point your head in a direction (up, down, left, or right).`;
-    currentPlayer = "Defender";
-      } else {
-        // Defender's turn
-        defender = currentPlayerDirection;
+//     if (currentPlayer === "Attacker") {
+//         // Attacker's turn
+//         attacker = currentPlayerDirection;
+//     directionsElement.textContent = `Defender, point your head in a direction (up, down, left, or right).`;
+//     currentPlayer = "Defender";
+//       } else {
+//         // Defender's turn
+//         defender = currentPlayerDirection;
 
-    if (attacker !== defender) {
-        // Defender wins the round
-        defenderScore++;
-    messageElement.textContent = 'Defender wins the round!';
-        } else {
-        // Attacker wins the round
-        attackerScore++;
-    messageElement.textContent = 'Attacker wins the round and hits the Defender!';
-        }
-    round++;
+//     if (attacker !== defender) {
+//         // Defender wins the round
+//         defenderScore++;
+//     messageElement.textContent = 'Defender wins the round!';
+//         } else {
+//         // Attacker wins the round
+//         attackerScore++;
+//     messageElement.textContent = 'Attacker wins the round and hits the Defender!';
+//         }
+//     round++;
 
-    // Switch roles if the Defender wins or Attacker reaches 3 points
-    if (defender !== attacker || attackerScore === 3) {
-          const temp = attacker;
-    attacker = defender;
-    defender = temp;
-        }
+//     // Switch roles if the Defender wins or Attacker reaches 3 points
+//     if (defender !== attacker || attackerScore === 3) {
+//           const temp = attacker;
+//     attacker = defender;
+//     defender = temp;
+//         }
 
-    displayRoles();
+//     displayRoles();
 
-    // Check if the game is over
-    if (attackerScore === 3) {
-        messageElement.textContent = 'Attacker wins the game!';
-    disableDirectionButtons();
-        } else if (defenderScore === 3) {
-        messageElement.textContent = 'Defender wins the game!';
-    disableDirectionButtons();
-        }
+//     // Check if the game is over
+//     if (attackerScore === 3) {
+//         messageElement.textContent = 'Attacker wins the game!';
+//     disableDirectionButtons();
+//         } else if (defenderScore === 3) {
+//         messageElement.textContent = 'Defender wins the game!';
+//     disableDirectionButtons();
+//         }
 
-    // Attacker's turn
-    directionsElement.textContent = `Attacker, point your hand to a direction (up, down, left, or right).`;
-    currentPlayer = "Attacker";
-      }
-    };
+//     // Attacker's turn
+//     directionsElement.textContent = `Attacker, point your hand to a direction (up, down, left, or right).`;
+//     currentPlayer = "Attacker";
+//       }
+//     };
 
-    // Enable direction buttons
-    const enableDirectionButtons = () => {
-      for (let i = 0; i < directionButtons.length; i++) {
-        directionButtons[i].addEventListener('click', directionClickHandler);
-      }
-    };
+//     // Enable direction buttons
+//     const enableDirectionButtons = () => {
+//       for (let i = 0; i < directionButtons.length; i++) {
+//         directionButtons[i].addEventListener('click', directionClickHandler);
+//       }
+//     };
 
-    // Disable direction buttons
-    const disableDirectionButtons = () => {
-      for (let i = 0; i < directionButtons.length; i++) {
-        directionButtons[i].removeEventListener('click', directionClickHandler);
-      }
-    };
+//     // Disable direction buttons
+//     const disableDirectionButtons = () => {
+//       for (let i = 0; i < directionButtons.length; i++) {
+//         directionButtons[i].removeEventListener('click', directionClickHandler);
+//       }
+//     };
 
-    // Start the game
-    const startGame = () => {
-        round = 1;
-    attackerScore = 0;
-    defenderScore = 0;
-    currentPlayer = "Attacker";
+//     // Start the game
+//     const startGame = () => {
+//         round = 1;
+//     attackerScore = 0;
+//     defenderScore = 0;
+//     currentPlayer = "Attacker";
 
-    displayRoles();
-    messageElement.textContent = '';
-    directionsElement.textContent = `Attacker, point your hand to a direction (up, down, left, or right).`;
-    enableDirectionButtons();
-    };
+//     displayRoles();
+//     messageElement.textContent = '';
+//     directionsElement.textContent = `Attacker, point your hand to a direction (up, down, left, or right).`;
+//     enableDirectionButtons();
+//     };
 
-    // Event listener for the start button
-    startButton.addEventListener('click', () => {
-        startGame();
-    });
-</script>
-</body >
-</html >
+//     // Event listener for the start button
+//     startButton.addEventListener('click', () => {
+//         startGame();
+//     });
+// </script>
+// </body >
+// </html >
 
 
